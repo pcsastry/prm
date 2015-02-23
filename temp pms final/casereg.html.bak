@@ -1,0 +1,12 @@
+<html>
+<head>
+<title> Case Register </title> </head>
+<body>
+<form method="post" action="clist.jsp">
+<font face="arial black">
+<h4>Please enter the case id of the prisoner
+<input type="text" size=10 name="caseid">
+<INPUT TYPE="submit">
+<INPUT TYPE="reset">
+</body>
+</html>

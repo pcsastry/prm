@@ -1,0 +1,16 @@
+<html>
+<head>
+  <title> Example </title>
+</head>
+<body>
+
+<FORM  METHOD="post" ACTION="Logins.jsp" >
+<center><br><br><br>
+<font face="arial black" color="red"><h1>Jailors</h1>
+<br><br><br><br>
+Log-in   <INPUT TYPE="text" size=20 name="id"> <br><br>
+Password <INPUT TYPE="password" size=20 name="pass"><br><br>
+<INPUT TYPE="submit" value="Submit"> <INPUT TYPE="reset" value="Reset">
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<HTML>
+<%@ page import="javax.sql.*,java.sql.*" %>
+
+<HEAD>
+<TITLE>Visitors Details </TITLE>
+</HEAD>
+
+<BODY>
+
+
+<%
+        String id=response.getParameter("caseid");
+	
+	String cid,descr,ctype;
+	
+
+	Statement st=null;
+        ResultSet rs=null;        
+        Class.forName("oracle.jdbc.driver.OracleDriver");
+	Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:project","project","project");
+         
+        st =con.createStatement();
+	rs=st.executeQuery("select * from case where cid='"+id+"'");
+    
+	if(rs.next())
+	{
+		 cid=rs.getString(1);
+		 descr=rs.getString(2);
+		 ctype=rs.getString(3);
+                 		
+     %>   
+	<br><br><br>
+	<center>
+        <table>
+	<tr> <td width=200 align=left> Case Id		
+	   <td align=center><%=cid%>  </tr>
+	<tr> <td width=200 align=left> Description		
+	   <td align=center><%=descr%>  </tr>
+	 <tr> <td width=200 align=left> Case Type	
+	   <td align=center><%=ctype%>  </tr>
+        
+
+      <%
+	}
+       esle
+       { %>
+        <center><br><br><br>Please enter the valid case id <br>
+        <a href="casereg.html">Re-enter</a>   
+       <%
+       }
+	st.close();
+	rs.close();
+	con.close();
+
+%>
+</table>
+ <br><br><a href="jailorservices.html">Back to jailor services</a>
+ 
+
+</body>
+</html>

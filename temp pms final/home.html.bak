@@ -1,0 +1,21 @@
+<HTML>
+<head>
+<title> Prison Management System </title>
+</head>
+<body bgcolor=#CDCDCD>
+<br>
+<center>
+<img src="TITLE1.bmp">
+<font face="comic sans ms" color="red">
+<h4><marquee>What's going on behind the walls ??? </marquee></h4></font>
+</center>
+<br><br><br>
+<center>
+<table width=700>
+  <tr> <td> <a href="home.html"> Home </a> </td> <td> &nbsp;</td> <td rowspan="5"> <img src="prison.jpg" height=200 width=200></td></tr>
+  <tr> <td> <a href="abtpsm.html">About PSM </a> </td> <td> Welcome to</td> <td> </td> </tr>
+  <tr> <td> <a href="ex.html">Jailor Login </a> </td> <td> the Prison Management System</td> <td></td></tr>
+  <tr> <td> <a href="ex1.html">Visitor Login</a> </td> <td> </td> <td> </td> </tr>
+</table>
+</body>
+</html>

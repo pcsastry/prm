@@ -1,0 +1,46 @@
+<%@ page language="java" import="java.sql.*,java.lang.*" %>
+
+
+<% 	
+if(request.getParameter("vname").length()!=0 ||
+request.getParameter("pass").length()!=0 ||
+request.getParameter("month").length()!=0 ||
+request.getParameter("addr").length()!=0 ||
+request.getParameter("ph").length()!=0)
+
+{
+	
+
+Class.forName("oracle.jdbc.driver.OracleDriver");
+	Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:project","project","project");
+		     	
+	Statement st=con.createStatement();
+		
+	String name=request.getParameter("vname");
+	String pass=request.getParameter("pass");
+	String address=request.getParameter("addr");
+	String phone=request.getParameter("ph");
+		
+	String s="insert into vidpas values(' ',' ','"+vname+"','"+password+"')";
+		
+	
+	if(noofrows==1)
+	{
+%><jsp:forward page="createproviderlogin.jsp" />
+<% 	}
+	else
+	{
+%><jsp:forward page="databaseerror.jsp" />
+	out.println("error");
+<%	}
+	st.close();
+	con.close();
+}
+else
+{
+	out.println("<h3><font color=red><i><center>You must Enter Full Data");
+%>
+<br><br><input type=button value="Back" onclick="history.back()">
+<%
+}
+%>

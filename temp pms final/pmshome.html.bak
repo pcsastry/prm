@@ -1,0 +1,14 @@
+<html>
+<head>
+<title> Prison Management System </title>
+<center>
+<frameset rows="20%,*" border="0">
+<frame name="f1" src="image1.html" >
+<frameset cols="25%,*" >
+ <frame name="f2" src="services.html">
+ <frame name="f3" src="pms.html">
+</frameset>
+</frameset>
+</head>
+<body bgcolor=#FFCCFF> </body>
+</html>

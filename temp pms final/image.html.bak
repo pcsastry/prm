@@ -1,0 +1,10 @@
+<html>
+<head>
+<title> image </title>
+</head>
+<body>
+<img name='m1' href="spr.jpg">
+</img>
+</body>
+</html>
+

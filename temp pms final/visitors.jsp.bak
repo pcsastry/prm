@@ -1,0 +1,59 @@
+<HTML>
+<%@ page import="javax.sql.*,java.sql.*" %>
+
+<HEAD>
+<TITLE>Visitors Details </TITLE>
+</HEAD>
+
+<BODY>
+
+
+<%
+     
+	
+	String vid,vname,pname,vdate,status;
+	
+
+	Statement st=null;
+        ResultSet rs=null;        
+        Class.forName("oracle.jdbc.driver.OracleDriver");
+	Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:project","project","project");
+         
+        st =con.createStatement();
+	rs=st.executeQuery("select * from visit");
+    
+	if(rs.next())
+	{
+		 vid=rs.getString(1);
+		 vname=rs.getString(2);
+		 pname=rs.getString(3);
+                 vdate=rs.getString(4);
+                 status=rs.getString(5);
+		
+	%>   
+	<br><br><br>
+	<center>
+    <table>
+	<tr> <td width=200 align=left> Visitor Id		
+	   <td align=center><%=vid%>  </tr>
+	<tr> <td width=200 align=left> Visitor Name		
+	   <td align=center><%=vname%>  </tr>
+	 <tr> <td width=200 align=left>Prisoner Name	
+	   <td align=center><%=pname%>  </tr>
+        <tr> <td width=200 align=left> Visit Date		
+	  <td align=center><%=vdate%>  </tr>
+        <tr> <td width=200 align=left> Status		
+	   <td align=center><%=status%>  </tr>
+
+      <%
+	}
+	st.close();
+	rs.close();
+	con.close();
+
+%>
+ <br><br><a href="jailorservices.html">Back to jailor services</a>
+ 
+
+</body>
+</html>

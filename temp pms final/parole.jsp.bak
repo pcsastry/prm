@@ -1,0 +1,64 @@
+<%@ page import="javax.sql.*,java.sql.*" %>
+<%@ page session="false"%>
+<jsp:useBean id="dcon" scope="session" class="dbean.DBCon" />
+<HTML>
+<HEAD>
+<TITLE>Parole Details </TITLE>
+</HEAD>
+
+<BODY>
+<%
+   String pid,rname,addr,days,lastvisit;
+         Statement st=null;
+         ResultSet rs=null;
+         Class.forName("oracle.jdbc.driver.OracleDriver");
+	     Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:project","project","project");
+         st =con.createStatement();
+		 st=con.createStatement();
+	     rs=st.executeQuery("select * from parole");
+         
+ %>
+ <br><font color=green><h2>The Parole register </font><br><br>
+		<center>
+<table>
+<tr height=20>
+    	<th width=200><u><i>PRISONER ID
+	    <th width=400><u><i>REFEREE NAME 
+		<th width=400><u><i>REFEREE ADDRESS
+     	<th width=400><u><i>REMAND FREQUENCY DAYS
+		<th width=400><u><i>LAST VISIT
+</tr>
+<br>
+ <%        while(rs.next())
+	{
+         
+		pid=rs.getString(1);
+		rname=rs.getString(2);
+		addr=rs.getString(3);
+		days=rs.getString(4);
+		lastvisit=rs.getString(5);
+		
+		
+%>
+<tr>
+	<th align="center"><%=pid%>
+	<th align="center"><%=rname%>
+	<th align="center"><%=addr%>
+	<th align="center"><%=days%>
+	<th align="center"><%=lastvisit%>
+	
+</tr>
+
+
+<%				
+	}
+	st.close();
+	rs.close();
+	
+
+%>
+</table>
+<center>
+<br><br><a href="C:\Tomcat 5.5\webapps\project\jailorservices.html">Back to jailor services</a>
+</body>
+</html>

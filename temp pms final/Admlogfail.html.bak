@@ -1,0 +1,18 @@
+<html>
+<head>
+</head>
+<body>
+<center>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h2>Login Failed</h2>
+<br>
+Please Enter the proper jailor id and password
+<br>
+<br>
+<a href="ex.html" target="f3">Re-Login</a>
+</body>
+</html>

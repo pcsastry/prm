@@ -1,0 +1,15 @@
+<html>
+   <head>
+       <title> Jailors Log-in </title>
+   </head>
+
+<body bgcolor=#99CCCC>
+<FORM  METHOD="post" ACTION="verifyjailor.jsp">
+<center>
+<font face="comic sans ms" color="red"><h1>Jailors</h1>
+<br><br><br><br>
+Log-in   <INPUT TYPE="text" size=20 name="id"> <br><br>
+Password <INPUT TYPE="password" size=20 name="pass"><br><br>
+<INPUT TYPE="submit" value="Submit"> <INPUT TYPE="reset" value="Reset">
+</body>
+</html>

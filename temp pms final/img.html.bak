@@ -1,0 +1,16 @@
+<html>
+<head>
+<script language="javascript">
+function blend()
+{
+ image2.filters("revealTrans").apply();
+ image2.style.visibility="hidden";
+ image2.filters("revealTrans").apply();
+}
+</script>
+</head>
+<body bgcolor=#D9FFFD onload="blend()">
+<img id="image1" src="joolakanti.jpg" style="position:absolute;left:10;top:10;width=300;height=200;">
+<img id="image2" src="mastan.jpg" style="position:absolute;left:10;top:10;width=300;height=200;filter:revealTrans(duration=20000000,transition=10)">
+</body>
+</html>
